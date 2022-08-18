@@ -2,9 +2,7 @@ const { supabase } = require("../../database/Supabase");
 
 class ListSpendingService {
   async listSpendingService() {
-    const { data: spending, error } = await supabase
-      .from("spending")
-      .select("*");
+    const { data: spending, error } = await supabase.from("MyCat").select("*");
 
     return spending;
   }

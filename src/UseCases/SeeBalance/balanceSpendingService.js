@@ -2,9 +2,7 @@ const { supabase } = require("../../database/Supabase");
 
 class BalanceSpendingService {
   async balanceService() {
-    const { data: spendings, error } = await supabase
-      .from("spending")
-      .select("*");
+    const { data: spendings, error } = await supabase.from("MyCat").select("*");
 
     const values = [];
     let somValues = 0;
